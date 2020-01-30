@@ -1,0 +1,18 @@
+.rdashboard {
+  &_appHeader {
+    @apply flex flex-initial w-full z-10 shadow;
+    background: var(--headerBackground);
+    &_logo {
+      @apply flex-shrink-0 items-center;
+    }
+    &_logUser {
+      @apply flex items-center cursor-pointer ml-auto;
+      &_avatar {
+        @apply w-6 h-6 rounded mx-2 select-none;
+      }
+      &_name {
+        @apply select-none mr-2 leading-none antialiased subpixel-antialiased text-sm;
+      }
+    }
+  }
+}

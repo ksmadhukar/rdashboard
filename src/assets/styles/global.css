@@ -1,0 +1,28 @@
+html,
+body {
+  background: var(--background);
+  color: var(--textColor);
+  font-family: monospace, monospace;
+  @apply font-sans m-0 p-0 font-normal tracking-wide;
+  @screen xl {
+    @apply text-sm;
+  }
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+a {
+  color: var(--linkColor);
+}
+
+.rdashboard {
+  @apply w-full h-screen;
+  &_appContent {
+    &_page {
+      @apply p-3;
+    }
+  }
+}

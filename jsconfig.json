@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "components/*": ["components/*"],
+      "assets/*": ["assets/*"],
+      "containers/*": ["containers/*"],
+      "services/*": ["services/*"],
+      "store/*": ["store/*"],
+      "utils/*": ["utils/*"]
+    },
+    "checkJs" : false,
+    "sourceMap": false
+  },
+  "exclude": ["node_modules", "build"]
+}

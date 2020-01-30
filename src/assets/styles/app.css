@@ -1,0 +1,12 @@
+@import "./theme/light.css";
+@import "./theme/dark.css";
+
+/**
+ * This injects Tailwind's base styles and any base styles registered by
+ * plugins.
+ */
+@import "tailwindcss/base";
+
+@import "./global.css";
+@import "./header.css";
+@import "./sample.css";

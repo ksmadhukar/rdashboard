@@ -1,0 +1,8 @@
+/* dark theme color codes */
+
+[data-theme="dark"] {
+    --background: #272b35;
+    --headerBackground : #1a1e28;
+    --textColor: #cec6c6;
+    --linkColor: #61dafb;
+}

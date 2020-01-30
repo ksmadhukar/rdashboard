@@ -1,0 +1,53 @@
+{
+  "name": "edxi-react-app",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "run-p watch:css start:react",
+    "build": "run-p build:clean build:css build:react",
+    "start:react": "react-scripts start",
+    "build:react": "react-scripts build",
+    "build:clean": "rimraf ./build",
+    "build:css": "postcss src/assets/styles/app.css -o public/app.css",
+    "watch:css": "postcss src/assets/styles/app.css -o public/app.css -w",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.7.0",
+    "immer": "^5.0.0",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-redux": "^7.1.3",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.3.0",
+    "redux": "^4.0.4",
+    "redux-saga": "^1.1.3"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^1.3.0",
+    "autoprefixer": "^9.7.1",
+    "cssnano": "^4.1.10",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^6.1.3",
+    "postcss-import": "^12.0.1",
+    "postcss-nested": "^4.2.1",
+    "redux-devtools": "^3.5.0",
+    "redux-logger": "^3.0.6",
+    "tailwindcss": "^1.1.3"
+  }
+}

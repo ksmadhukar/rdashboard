@@ -1,0 +1,8 @@
+/* light theme color codes */
+
+:root {
+    --background: #f7fafc;
+    --headerBackground: #fff;
+    --textColor: #242425;
+    --linkColor: #4178F0;
+}
