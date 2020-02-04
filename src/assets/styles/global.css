@@ -2,8 +2,9 @@ html,
 body {
   background: var(--background);
   color: var(--textColor);
-  font-family: monospace, monospace;
-  @apply font-sans m-0 p-0 font-normal tracking-wide;
+  /* font-family: monospace, monospace; */
+  @apply m-0 p-0 font-normal tracking-wide;
+  @apply font-sans !important;
   @screen xl {
     @apply text-sm;
   }
@@ -13,16 +14,173 @@ pre {
   font-family: monospace, monospace;
   font-size: 1em;
 }
-
+p {
+  color: var(--ltgray);
+}
 a {
   color: var(--linkColor);
 }
-
+btn {
+  outline: none;
+}
+.border-dash {
+  &.border-r {
+    border-right: 2px dashed #ccc;
+  }
+}
+.head-nav-item {
+  .rs-icon {
+    padding-top: 7px !important;
+  }
+}
+.icon-wrap {
+  width: 30px;
+  height: 30px;
+  background: rgb(80, 190, 203);
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  border-radius: 50%;
+  padding-top: 0;
+}
 .rdashboard {
-  @apply w-full h-screen;
-  &_appContent {
-    &_page {
-      @apply p-3;
+  @apply w-full h-full;
+  background: var(--background);
+  color: var(--textColor);
+  .wrapper {
+    @apply flex w-full h-full;
+    .left-panel {
+      @apply w-2/12;
     }
+    .center-panel {
+      @apply w-7/12;
+    }
+    .right-panel {
+      @apply w-3/12 bg-white;
+      max-width: 300px;
+    }
+  }
+}
+.head {
+  @apply w-full h-full p-8 flex;
+  background-color: #f8f9fe;
+  max-height: 200px;
+  &-title {
+    @apply text-lg font-bold;
+  }
+  &-nav {
+    @apply flex ml-auto;
+  }
+}
+.rs-sidebar {
+  background-color: #253ba3;
+  .rs-sidenav-subtle,
+  .rs-navbar.rs-navbar-subtle {
+    background-color: transparent;
+  }
+  .rs-nav-item > .rs-nav-item-content,
+  .rs-sidenav-subtle.rs-sidenav-collapse-in
+    .rs-dropdown-menu
+    > li
+    > .rs-dropdown-item-content,
+  .rs-btn-subtle,
+  .rs-navbar.rs-navbar-subtle .rs-dropdown .rs-dropdown-toggle,
+  .rs-navbar.rs-navbar-subtle .rs-nav-item > .rs-nav-item-content {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .rs-navbar.rs-navbar-subtle
+    .rs-navbar-nav
+    .rs-dropdown
+    .rs-dropdown-toggle:hover,
+  .rs-sidenav-subtle.rs-sidenav-collapse-in
+    .rs-dropdown-menu
+    > li
+    > .rs-dropdown-item-content:hover,
+  .rs-btn-subtle:hover,
+  .rs-nav-default
+    .rs-nav-item:not(.rs-nav-item-active):not(.rs-nav-item-disabled)
+    > .rs-nav-item-content:hover,
+  .rs-navbar.rs-navbar-subtle
+    .rs-navbar-nav
+    .rs-nav-item:not(.rs-nav-item-active)
+    > .rs-nav-item-content:hover,
+  .rs-navbar.rs-navbar-subtle
+    .rs-navbar-nav
+    .rs-nav-item:not(.rs-nav-item-active)
+    > .rs-nav-item-content:focus,
+  .rs-btn-subtle:focus {
+    background-color: rgba(14, 39, 160, 0.6);
+    @apply text-white font-bold;
+  }
+  .rs-nav .rs-nav-item-active {
+    &:after {
+      content: "";
+      width: 3px;
+      height: 20px;
+      background-color: #fff;
+      position: absolute;
+      right: 0;
+      top: 1rem;
+      border-radius: 2rem;
+    }
+    .rs-nav-item-content {
+      @apply text-white font-bold;
+    }
+  }
+  .rs-nav-item-content,
+  .rs-dropdown .rs-dropdown-toggle {
+    @apply text-sm !important;
+  }
+}
+.rs-panel {
+  @apply w-full mb-4 bg-white p-3 shadow relative;
+  overflow: inherit !important;
+  .rs-panel-heading {
+    @apply font-bold;
+  }
+  .rs-dropdown {
+    @apply absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+  .rs-dropdown-menu {
+    @apply right-0;
+    left: unset !important;
+  }
+  .rs-dropdown-no-caret .rs-dropdown-toggle {
+    @apply py-1 px-3 !important;
+  }
+  .rs-dropdown .rs-btn > .rs-icon {
+    @apply m-0 !important;
+  }
+}
+/* .rs-dropdown-open.rs-dropdown-placement-top-start > .rs-dropdown-menu,
+.rs-dropdown-open.rs-dropdown-placement-bottom-start > .rs-dropdown-menu {
+  @apply right-0;
+  left: unset !important;
+} */
+.view-all {
+  @apply flex items-center justify-center cursor-pointer font-bold;
+  color: var(--green);
+}
+.detail-list-item {
+  @apply flex items-center border-b border-gray-300;
+}
+.btn-rounded {
+  display: inline-block;
+  padding: 5px 30px;
+  border: 1px solid #ccc;
+  border-radius: 2rem;
+  margin: 1rem auto;
+  font-size: 12px;
+  cursor: pointer;
+}
+.icon-rounded {
+  @apply mr-3;
+  .rs-icon {
+    padding: 1rem;
+    /* background-color: rgba(96, 194, 206, 0.25);
+    color: rgb(96, 194, 206); */
+    border-radius: 2rem;
   }
 }

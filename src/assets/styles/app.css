@@ -6,7 +6,10 @@
  * plugins.
  */
 @import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 @import "./global.css";
 @import "./header.css";
+@import "./dashboard.css";
 @import "./sample.css";

@@ -1,8 +1,12 @@
 /* light theme color codes */
 
 :root {
-    --background: #f7fafc;
-    --headerBackground: #fff;
-    --textColor: #242425;
-    --linkColor: #4178F0;
+  --background: #eceef9;
+  --headerBackground: #fff;
+  --textColor: #242425;
+  --linkColor: #4178f0;
+  --primary: #273dae;
+  --green: #50becb;
+  --ltblue: #5473e8;
+  --ltgray: #9d9ea4;
 }
